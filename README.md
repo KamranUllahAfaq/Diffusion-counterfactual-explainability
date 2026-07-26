@@ -3,7 +3,6 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Paper](https://img.shields.io/badge/paper-arXiv%3A2506.07883-B31B1B)](https://arxiv.org/abs/2506.07883)
 
 Research code for generating and evaluating image counterfactuals with diffusion-based
 structural causal models. The project implements the abduction–action–prediction
@@ -130,30 +129,12 @@ checkpoint, guidance scale, number of denoising steps, and mechanism variant.
 - Store configuration files alongside checkpoints.
 - Report both causal effectiveness and identity-preservation metrics.
 
-## Citation and provenance
-
-This repository packages and documents an implementation associated with:
-
-```bibtex
-@inproceedings{rasal2025diffusion,
-  title     = {Diffusion Counterfactual Generation with Semantic Abduction},
-  author    = {Rasal, Rajat and Kori, Avinash and De Sousa Ribeiro, Fabio and
-               Xia, Tian and Glocker, Ben},
-  booktitle = {Proceedings of the 42nd International Conference on Machine Learning},
-  year      = {2025}
-}
-```
-
-See [CITATION.cff](CITATION.cff) for machine-readable citation metadata and
-[NOTICE.md](NOTICE.md) for provenance and third-party acknowledgements.
-
-## Contributing
-
-Bug fixes, documentation improvements, and reproducibility enhancements are
-welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
-Please avoid committing protected data or pretrained weights.
 
 ## License
 
 Distributed under the MIT License. See [LICENSE](LICENSE). Existing copyright and
 license notices must remain intact in redistributions and substantial derivatives.
+
+<div align="center">
+Built by <a href="https://github.com/KamranUllahAfaq">Kamran Ullah Afaq</a>.
+</div>
