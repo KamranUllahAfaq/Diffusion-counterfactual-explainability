@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated ICML 2025 paper."
+title: "Diffusion Counterfactual Explainability"
+type: software
+license: MIT
+repository-code: "https://github.com/KamranUllahAfaq/Diffusion-counterfactual-explainability"
+authors:
+  - family-names: Rasal
+    given-names: Rajat
+  - family-names: Kori
+    given-names: Avinash
+  - family-names: De Sousa Ribeiro
+    given-names: Fabio
+  - family-names: Xia
+    given-names: Tian
+  - family-names: Glocker
+    given-names: Ben
+preferred-citation:
+  type: conference-paper
+  title: "Diffusion Counterfactual Generation with Semantic Abduction"
+  authors:
+    - family-names: Rasal
+      given-names: Rajat
+    - family-names: Kori
+      given-names: Avinash
+    - family-names: De Sousa Ribeiro
+      given-names: Fabio
+    - family-names: Xia
+      given-names: Tian
+    - family-names: Glocker
+      given-names: Ben
+  conference:
+    name: "42nd International Conference on Machine Learning"
+  year: 2025
+  identifiers:
+    - type: url
+      value: "https://arxiv.org/abs/2506.07883"

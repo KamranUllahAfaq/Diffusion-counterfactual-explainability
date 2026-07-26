@@ -1,0 +1,94 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diffusion-counterfactual-explainability"
+version = "0.1.0"
+description = "Diffusion-based structural causal models for image counterfactual generation and evaluation"
+readme = "README.md"
+requires-python = ">=3.9,<3.13"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Rajat Rasal"},
+  {name = "Avinash Kori"},
+  {name = "Fabio De Sousa Ribeiro"},
+  {name = "Tian Xia"},
+  {name = "Ben Glocker"},
+]
+keywords = ["causal-inference", "counterfactuals", "diffusion-models", "explainable-ai"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "accelerate>=0.26,<1",
+  "diffusers>=0.30,<1",
+  "einops>=0.7,<1",
+  "h5py>=3.10,<4",
+  "imageio>=2.26,<3",
+  "loguru>=0.7,<1",
+  "matplotlib>=3.8,<4",
+  "numpy>=1.26,<2",
+  "pandas>=2.1,<3",
+  "Pillow>=10,<12",
+  "pyro-ppl>=1.9,<2",
+  "PyYAML>=6,<7",
+  "scikit-learn>=1.4,<2",
+  "torch>=2.1,<3",
+  "torchmetrics>=1.4,<2",
+  "torchvision>=0.16,<1",
+  "tqdm>=4.66,<5",
+]
+
+[project.optional-dependencies]
+dev = ["build>=1.2", "pytest>=8,<9", "ruff>=0.5"]
+perceptual = ["lpips>=0.1.4,<0.2"]
+
+[project.urls]
+Homepage = "https://github.com/KamranUllahAfaq/Diffusion-counterfactual-explainability"
+Paper = "https://arxiv.org/abs/2506.07883"
+Issues = "https://github.com/KamranUllahAfaq/Diffusion-counterfactual-explainability/issues"
+
+[project.scripts]
+counterfactual-train = "scripts.train:main"
+counterfactual-test = "scripts.test:main"
+counterfactual-clf-train = "scripts.clf_train:main"
+counterfactual-clf-test = "scripts.clf_test:main"
+
+[tool.setuptools]
+include-package-data = true
+packages = [
+  "counterfactuals",
+  "scripts",
+  "counterfactuals.model",
+  "counterfactuals.model.models",
+  "counterfactuals.model.utils",
+  "counterfactuals.scm",
+  "counterfactuals.scm.image_mechanism",
+  "counterfactuals.scm.numerical_mechanism",
+  "counterfactuals.benchmarking",
+  "counterfactuals.benchmarking.digit_cf",
+]
+
+[tool.setuptools.package-dir]
+"counterfactuals" = "counterfactuals"
+"scripts" = "scripts"
+"counterfactuals.model" = "model"
+"counterfactuals.model.models" = "model/models"
+"counterfactuals.model.utils" = "model/utils"
+"counterfactuals.scm" = "scm"
+"counterfactuals.scm.image_mechanism" = "scm/image_mechanism"
+"counterfactuals.scm.numerical_mechanism" = "scm/numerical_mechanism"
+"counterfactuals.benchmarking" = "benchmarking"
+"counterfactuals.benchmarking.digit_cf" = "benchmarking/digit_cf"
+
+[tool.setuptools.package-data]
+"counterfactuals.model" = ["cfg/*.yml"]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 120
